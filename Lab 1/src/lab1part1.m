@@ -25,8 +25,8 @@ type playSong
 
 load better_fugue.mat
 song = playSong(theVoices);
-audiowrite('better_fugue.wav',song/max(song),8000);
+audiowrite('better_fugue.wav',song/max(song),11024);
 
 load barukh_fugue.mat
 song = playSong(theVoices);
-audiowrite('barukh_fugue.wav',song/max(song),8000);
+audiowrite('barukh_fugue.wav',song/max(song),11024);

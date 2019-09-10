@@ -8,7 +8,7 @@ function song = playSong(theVoices)
     Usage: song = playSong()
     %}
 
-    fs = 8000;
+    fs = 11024;
     bpm = 120;
     bps = bpm / 60;
     spb = 1 / bps;

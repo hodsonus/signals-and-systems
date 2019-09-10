@@ -18,6 +18,6 @@ function xx = key_to_trumpet_note(keynum, dur)
     for k = 1:length(harmonics.amplitudes)
         A = harmonics.amplitudes(k);
         phi = harmonics.phases(k);
-        xx = xx + real( A*exp(j*2*pi*freq*tt)*exp(j*phi) );
+        xx = xx + real( A*exp(j*2*pi*freq*k*tt)*exp(j*phi) );
     end
 end

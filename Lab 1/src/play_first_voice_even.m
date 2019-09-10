@@ -1,7 +1,7 @@
 % --------------play_first_voice_even.m-------------- %
 load barukh_fugue
 
-fs = 11025; % 11025 Hz also works
+fs = 11024; % 11025 Hz also works
 n1 = 1;
 
 durations = 0.5 * ones(1,length(theVoices(1).noteNumbers));

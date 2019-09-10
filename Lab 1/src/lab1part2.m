@@ -4,7 +4,7 @@
 %
 load bach_fugue.mat
 song = playSong(theVoices);
-audiowrite('bach_fugue.wav',song/max(song),8000);
+audiowrite('bach_fugue.wav',song/max(song),11024);
 
 %% 2.2 - Musical Tweaks - Enveloping
 %
@@ -13,7 +13,7 @@ type playSongWithADSR
 
 load bach_fugue.mat
 song = playSongWithADSR(theVoices);
-audiowrite('bach_fugue_ADSR.wav',song/max(song),8000);
+audiowrite('bach_fugue_ADSR.wav',song/max(song),11024);
 
 %% 2.3 - Musical Tweaks - Fourier Series of a Trumpet
 %

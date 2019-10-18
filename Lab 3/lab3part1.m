@@ -64,7 +64,10 @@ index * pi/500
 %
 
 %%
-% 1. Design a filtering system that consists of the cascade of two FIR nulling
+% 1.
+
+%%
+% Design a filtering system that consists of the cascade of two FIR nulling
 % filters that will eliminate the following input frequencies: w = 0.44*pi,
 % and w = 0.7*pi. For this part, derive the filter coefficients of both
 % nulling filters. Submit necessary code, and plots of the magnitude and
@@ -109,10 +112,12 @@ cascH = filt1H .* filt2H;
 
 subplot(2,1,1), semilogy(ww,abs(cascH)); %-- magnitude
 subplot(2,1,2), plot(ww,angle(cascH));
+
 %%
-%
+% 2.
+
 %%
-% 2. Generate an input signal that is the sum of three sinusoids
+% Generate an input signal that is the sum of three sinusoids
 
 n = 0:1:149;
 xx = 5*cos(0.3*pi*n) + 22*cos(0.44*pi*n - pi/3) + 22*cos(0.7*pi*n - pi/4);
@@ -120,10 +125,14 @@ clf
 plot(n,xx)
 
 %%
-% 4.
+% 3.
 
 clf
 out = conv(xx,casc);
+
+%%
+% 4.
+
 plot(out(1:50));
 
 %%
@@ -136,6 +145,9 @@ image(pg1);
 %
 pg2 = imread("1.3.4 pg2.jpg");
 image(pg2);
+
+%%
+% 5.
 
 %%
 % Plot the expected output of the cascaded filter and compare it to the

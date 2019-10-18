@@ -39,7 +39,7 @@ aa = 1;
 N = 400;
 
 [HH,ww] = freekz(bb,aa,ww,'whole');
-subplot(2,1,1), semilogy(ww,abs(HH));    %-- magnitude
+subplot(2,1,1), plot(ww,abs(HH));    %-- magnitude
 subplot(2,1,2), plot(ww,angle(HH));
 
 %% 1.2 - MATLAB find() function
@@ -85,7 +85,7 @@ filt1 = [b0,b1,b2];
 ww = -pi:pi/500:pi;
 filt1H = freekz(filt1,1,ww);
 
-subplot(2,1,1), semilogy(ww,abs(filt1H)); %-- magnitude
+subplot(2,1,1), plot(ww,abs(filt1H)); %-- magnitude
 subplot(2,1,2), plot(ww,angle(filt1H));
 
 %%
@@ -100,7 +100,7 @@ filt2 = [b0,b1,b2];
 ww = -pi:pi/500:pi;
 filt2H = freekz(filt2,1,ww);
 
-subplot(2,1,1), semilogy(ww,abs(filt2H)); %-- magnitude
+subplot(2,1,1), plot(ww,abs(filt2H)); %-- magnitude
 subplot(2,1,2), plot(ww,angle(filt2H));
 
 %%
@@ -110,7 +110,7 @@ ww = -pi:pi/500:pi;
 casc = conv(filt1,filt2);
 cascH = filt1H .* filt2H;
 
-subplot(2,1,1), semilogy(ww,abs(cascH)); %-- magnitude
+subplot(2,1,1), plot(ww,abs(cascH)); %-- magnitude
 subplot(2,1,2), plot(ww,angle(cascH));
 
 %%

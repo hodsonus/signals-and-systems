@@ -21,7 +21,7 @@ h = 2/L*cos(wc*n);
 b = 1;
 ww = 0:pi/500:pi;
 H = freekz(h,b,ww);
-subplot(2,1,1), semilogy(ww,abs(H)); %-- magnitude
+subplot(2,1,1), plot(ww,abs(H)); %-- magnitude
 subplot(2,1,2), plot(ww,angle(H)); %-- angle
 
 %%
@@ -82,7 +82,7 @@ h = 2/L*cos(wc*n);
 b = 1;
 ww = 0:pi/500:pi;
 H = freekz(h,b,ww);
-subplot(2,1,1), semilogy(ww,abs(H)); %-- magnitude
+subplot(2,1,1), plot(ww,abs(H)); %-- magnitude
 subplot(2,1,2), plot(ww,angle(H)); %-- angle
 
 % find all indexes where the magnitude of the frequency response is above
@@ -105,7 +105,7 @@ h = 2/L*cos(wc*n);
 b = 1;
 ww = 0:pi/500:pi;
 H = freekz(h,b,ww);
-subplot(2,1,1), semilogy(ww,abs(H)); %-- magnitude
+subplot(2,1,1), plot(ww,abs(H)); %-- magnitude
 subplot(2,1,2), plot(ww,angle(H)); %-- angle
 
 % find all indexes where the magnitude of the frequency response is above
@@ -179,7 +179,7 @@ end
 
 % plot the magnitude and angle response of the latest filter that we
 % generated (the first filter that fulfilled the requirements specified)
-subplot(2,1,1), semilogy(ww,abs(H)); %-- magnitude
+subplot(2,1,1), plot(ww,abs(H)); %-- magnitude
 subplot(2,1,2), plot(ww,angle(H)); %-- angle
 
 % print the length L of the first filter that fulfilled the requirements 
@@ -273,7 +273,7 @@ clf
 b = 1;
 ww = 0:pi/500:pi;
 H = freekz(h,b,ww);
-subplot(2,1,1), semilogy(ww,abs(H)); %-- magnitude
+subplot(2,1,1), plot(ww,abs(H)); %-- magnitude
 subplot(2,1,2), plot(ww,angle(H)); %-- angle
 
 % generate the table and fill out the first column (the frequencies of
@@ -332,7 +332,7 @@ b = 1;
 ww = 0:pi/500:pi;
 H = freekz(h,b,ww);
 
-subplot(2,1,1), semilogy(ww,abs(H)); %-- magnitude
+subplot(2,1,1), plot(ww,abs(H)); %-- magnitude
 subplot(2,1,2), plot(ww,angle(H)); %-- angle
 
 [pm, ~] = max(abs(H));
@@ -356,7 +356,7 @@ b = 1;
 ww = 0:pi/500:pi;
 H = freekz(h,b,ww);
 
-subplot(2,1,1), semilogy(ww,abs(H)); %-- magnitude
+subplot(2,1,1), plot(ww,abs(H)); %-- magnitude
 subplot(2,1,2), plot(ww,angle(H)); %-- angle
 
 [pm, pmi] = max(abs(H));

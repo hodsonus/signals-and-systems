@@ -1,7 +1,7 @@
 function [xx] = glottal_key_to_note(keynum, dur, harm, fs)
     %GLOTTAL_KEY_TO_NOTE
     
-    freq = 220 * (   2^( (keynum-49)/12 )   );
+    freq = 110 * (   2^( (keynum-49)/12 )   );
     A = 1;
     phi = 0;
 

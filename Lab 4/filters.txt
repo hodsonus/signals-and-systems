@@ -1,0 +1,35 @@
+There's a very nice function in MATLAB called tf2zpk that allows you to get the z and p (zeros and poles) from the B and A coefficients.
+See help tf2zpk
+
+Below are the B and A coefficients for the filters for part 2.3, along with the number of harmonics (K), fundamental frequency (f) and sampling frequency (FS)
+Note that glottal_key_to_note can be used for this by changing the frequency from 220 to 150, with a keynumer of 49
+
+Use the filter command to filter the input signal from glottal_key_to_note with the filter coefficients (see help filter)
+
+Ah:
+f=150;
+K=30;
+FS=10000;
+B = [1000, 1061.80340, 67.97118, -90.13669, 33.57449, 56.13896, 13.18955, 4.43501, 0.32104, 0.07485, 0.00791];
+A = [1, -1.08388, 0.01930, 0.24181, 0.27679, 0.09251, -0.12125, -0.20897, -0.16686, -0.04846, 0.81678, -0.68979];
+
+Ee:
+f=150;
+K=30;
+fs=10000;
+B = [100, 436.75214, 575.64329, 649.37874, 595.83403, 541.94807, 523.26797, 461.62049, 332.06201, 190.72305, 81.08040];
+A = [1, 0.68933, 0.76813, -0.08522, -1.01908, -1.39946, -0.93528, -0.01701, 0.58844, 0.61250, 0.68229];
+
+Oh:
+f=150;
+K=30;
+FS=10000;
+B = [1, 0.17321, 0.11001, 0.01733, -0.08000, -0.15589, -0.19001, -0.17322, -0.10998, -0.01733, 0.08000, 0.15589, -0.81002]
+A = [1, -3.35094, 4.59154, -3.01019, 0.80377]
+
+Oo:
+f=150;
+K=30;
+FS=10000;
+B = [100, -35.93219, -8.14314, 5.89313, 4.58134, 3.38779, -1.87825, -12.68492, 26.81544, 46.61470, -55.28507];
+A = [1, -2.89598, 3.41869, -2.20509, 0.97011, -0.38732, 0.12486, -0.02807, 0.01490, 0.00411, 0.00025];
